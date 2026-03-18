@@ -8,7 +8,7 @@ Vision-language pre-training (VLP) has achieved remarkable performance across di
 
 ## Framework
 
-<img width="1232" alt="image" src="[https://github.com/user-attachments/assets/0a7e7510-076d-4dd0-99cd-dcec59dc775e](https://github.com/guanzh1997/CVPR26-ANGA/blob/main/framework.png)" />
+<img width="1232" alt="image" src="framework.png" />
 
 ## Environment Configuration
 
