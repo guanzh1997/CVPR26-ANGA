@@ -54,40 +54,16 @@ Note: The image folder follows the structure dataset/xxx/image/xxx.jpg|png|jpeg
 
 ### Dataset Initiation
 
-Run the following command to init the dataset:
+Take the HateMemes dataset for an example, run the following command to init the dataset:
 
 ```shell
-python train-CL.py
+python src/init_data.py
 ```
 
 ### Training & Evaluation
 
-Run the following script to training our model and evaluate the results:
+Run the following command to training our model and evaluate the results:
 
 ```shell
-sh src/scripts/eval.sh
-```
-
-All the parameters have the same meaning as describe in our paper and you can simply config them in **src/config/config.yaml** or in command line.
-
-
-Run the following script to training baseline model and evaluate the results:
-
-```shell
-sh src/scripts/eval_baseline.sh
-```
-
-## Citation
-
-If you find the code useful for your research, please give us a star ⭐⭐⭐ and consider citing:
-
-```
-@inproceedings{lang2025retrievalaugmented,
-    author = {Lang, Jian and Cheng, Zhangtao and Zhong, Ting and Zhou, Fan},
-    booktitle = {AAAI Conference on Artificial Intelligence (AAAI)},
-    year = {2025},
-    pages = {18035--18043},
-    doi = {10.1609/aaai.v39i17.33984},
-    title = {Retrieval-Augmented Dynamic Prompt Tuning for Incomplete Multimodal Learning},
-}
+python src/train.py
 ```
