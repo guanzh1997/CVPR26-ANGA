@@ -54,10 +54,10 @@ Note: The image folder follows the structure dataset/xxx/image/xxx.jpg|png|jpeg
 
 ### Dataset Initiation
 
-Run the following script to init the dataset:
+Run the following command to init the dataset:
 
 ```shell
-sh src/scripts/init_data.sh
+python train-CL.py
 ```
 
 ### Training & Evaluation
