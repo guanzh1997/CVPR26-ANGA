@@ -67,3 +67,18 @@ Run the following command to training our model and evaluate the results:
 ```shell
 python src/train.py
 ```
+
+## Citation
+
+If you find the code useful for your research, please give us a star ⭐⭐⭐ and consider citing:
+
+```
+@inproceedings{guan2026anchorguided,
+    author = {Zhi{-}Hao Guan and
+                  Longfei Huang and
+                  Yang Yang},
+    booktitle = {CVPR},
+    year = {2026},
+    title = {Anchor-Guided Gradient Alignment for Incomplete Multimodal Learning}
+}
+```
