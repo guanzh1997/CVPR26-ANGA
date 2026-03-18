@@ -8,32 +8,20 @@ Vision-language pre-training (VLP) has achieved remarkable performance across di
 
 ## Framework
 
-<img width="1232" alt="image" src="https://github.com/user-attachments/assets/0a7e7510-076d-4dd0-99cd-dcec59dc775e" />
-
-## Missing Setting
-
-We assume training set is fully available and define the missing rate $\eta$ % as the rate of modality-incomplete samples in the **test set**: (1) text/image missing with $\eta$ % indicates that there are $\eta$ % image-only/text-only instances and (1 - $\eta$ %) modality-complete instances. (2) both modalities missing with $\eta$ % indicates that there are $\frac{\eta}{2}$ % text-only instances, $\frac{\eta}{2}$ % image-only instances and (1 - $\eta$ %) modality-complete instances. We set **missing rate $\eta$ = 70 by default**. For training of each model (both ours and baselines), **we simulate the same 70 % missing rate to align model optimization well with test conditions,** but **allow each model to access the full modality information in the training set** to assist the training process. (e.g., for reconstruction models, we allow them to leverage the full modality information from training set as the reconstruction learning supervision signals). And **our memory bank is only constructed with the training and validation set** for a fair comparison (without any test data leakage).
+<img width="1232" alt="image" src="[https://github.com/user-attachments/assets/0a7e7510-076d-4dd0-99cd-dcec59dc775e](https://github.com/guanzh1997/CVPR26-ANGA/blob/main/framework.png)" />
 
 ## Environment Configuration
 
-First, clone this repo:
+First, create a new conda env for ANGA:
 
 ```shell
-git clone https://github.com/Jian-Lang/RAGPT.git
-
-cd RAGPT
-```
-
-First, create a new conda env for RAGPT:
-
-```shell
-conda create -n RAGPT python=3.9
+conda create -n ANGA python=3.9
 ```
 
 Next, activate this env and install the dependencies from the requirements.txt:
 
 ```shell
-conda activate RAGPT
+conda activate ANGA
 
 pip install -r requirements.txt
 ```
