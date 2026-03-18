@@ -1,22 +1,10 @@
-# RAGPT: Retrieval-AuGmented dynamic Prompt Tuning framework
+# Anchor-Guided Gradient Alignment for Incomplete Multimodal Learning
 
-This repo is the official implementation of _Retrieval-Augmented Dynamic Prompt Tuning for Incomplete Multimodal Learning_ accepted by AAAI 2025. 
-
-Paper Link: https://arxiv.org/pdf/2501.01120
-
-> [!IMPORTANT]
->
-> *We have completed the missing setting of our work and added a "News and Updates" module.*
-
-## News and Updates
-
-+ 2025.8.12 🔨 We release the source code for Prompt-based baselines in this repo, including MAPs and MSPs, for better follow.
-+ 2025.5.15 🔥 The extension of RAGPT, dubbed REDEEM, is accepted by KDD 2025 Round 2. We will release the code for this extension in https://github.com/Jian-Lang/REDEEM.
-+ 2024.12.10 🔥 Our work, RAGPT, which aims to tackle the incomplete multimodal learning in pre-trained multimodal transformers, is accepted by AAAI 2025.
+This repo is the official implementation of _Anchor-Guided Gradient Alignment for Incomplete Multimodal Learning_ accepted by CVPR 2026. 
 
 ## Abstract
 
-Multimodal learning with incomplete modality is practical and challenging. Recently, researchers have focused on enhancing the robustness of pre-trained MultiModal Transformers (MMTs) under missing modality conditions by applying learnable prompts. However, these prompt-based methods face several limitations: (1) incomplete modalities provide restricted modal cues for task-specific inference, (2) dummy imputation for missing content causes information loss and introduces noise, and (3) static prompts are instance-agnostic, offering limited knowledge for instances with various missing conditions. To address these issues, we propose **RAGPT**, a novel **R**etrieval-**A**u**G**mented dynamic **P**rompt **T**uning framework. RAGPT comprises three modules: (I) the multi-channel retriever, which identifies similar instances through a withinmodality retrieval strategy, (II) the missing modality generator, which recovers missing information using retrieved contexts, and (III) the context-aware prompter, which captures contextual knowledge from relevant instances and generates dynamic prompts to largely enhance the MMT’s robustness. 
+Vision-language pre-training (VLP) has achieved remarkable performance across diverse multimodal learning (MML) tasks. Recently, many efforts have focused on reconstructing missing modalities to improve the adaptability of VLP models in incomplete MML scenarios. However, these approaches overlook the learning imbalance under severe missing-modality conditions, i.e., the optimization process is dominated by reconstructed samples, thereby weakening complete-sample representations. In this paper, we propose a novel ANchor-guided Gradient Alignment (ANGA) framework to address this issue. Specifically, we first retrieve similar instances to reconstruct the missing modalities, thereby alleviating information deficiency. We then introduce an entropy-driven curriculum that progressively incorporates reliable reconstructed samples together with complete ones to form an optimization anchor, which guides gradient alignment to mitigate learning imbalance. Furthermore, we design a semantic-enhanced adapter that leverages the retrieved instances to generate dynamic prompts, further enhancing the robustness of the VLP model. Extensive experiments on widely used datasets demonstrate the superiority of ANGA over state-of-the-art (SOTA) baselines across various missing-modality scenarios.
 
 ## Framework
 
